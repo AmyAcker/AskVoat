@@ -63,7 +63,8 @@
     color: inherit;
 }
 
-.user .userkarma {
+.user .userkarma,
+.user .upvoatsGiven {
     border: 0;
 }
 
@@ -512,6 +513,7 @@ body {
 
 #container .content {
     flex-grow: 1;
+	min-width: 0;
 }
 
 .content {
@@ -548,10 +550,13 @@ a:focus {
 ----- Downvote: #3D4A90 */
 
 .tagline .post_upvotes,
-.user .upvoatsGiven a,
 .link .score.likes
 {
     color: #339959;
+}
+
+.user .upvoatsGiven a {
+	color: #eee !important;
 }
 
 .tagline .post_downvotes,
@@ -1289,6 +1294,15 @@ body.dark {
     #header-img-a {
         display: none;
     }
+	
+	.link:first-of-type .midcol {
+		top: -10px;
+		left: -10px;
+	}
+	
+	.link:first-of-type .entry {
+		padding-left: 15px;
+	}
 }
 
 /*--- Custom sidebar Stuff ---*/
