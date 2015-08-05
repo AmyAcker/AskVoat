@@ -70,6 +70,19 @@
 
 /*--- Misc ---*/
 
+.alert-firsttimevisitorwelcome {
+    margin-bottom: 25px;
+    background: transparent;
+    border: 0;
+    box-shadow: 0 13px 10px -15px rgba(0, 0, 0, 0.3);
+    margin-left: 22px;
+	transition: 150ms all cubic-bezier(0, 0, 0, .9);
+}
+
+.alert-firsttimevisitorwelcome:hover {
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
 .tooltipster-default {
     border-radius: 2px;
     border: 0;
@@ -186,14 +199,19 @@ body,
 .tabmenu a,
 .author,
 .alert-h1,
-.alert-h2
+.alert-h2,
+.btn-sub,
+.btn-whoaverse,
+.btn-tour
 {
     font-family: "Roboto", Arial, sans-serif;
 }
 
 /*    Secondary Font */
 
-.md {
+.alert,
+.md,
+.h6, h6 {
     font-family: "Neris", Arial, sans-serif;
     font-weight: 300;
 }
@@ -210,7 +228,8 @@ a:hover {
 /*--- Buttons ---*/
 
 .btn-whoaverse,
-a.btn-whoaverse {
+a.btn-whoaverse,
+a.btn-tour {
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 8px 16px;
@@ -219,7 +238,8 @@ a.btn-whoaverse {
     transition: 150ms all cubic-bezier(0, 0, 0, .9);
 }
 
-.btn-whoaverse:hover {
+.btn-whoaverse:hover,
+a.btn-tour:hover {
     border: 1px solid #aaa;
     color: #555;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
@@ -310,6 +330,11 @@ a.btn-whoaverse {
 
 .btn-whoaverse-paging:focus {
     color: inherit;
+}
+
+a.btn-tour {
+	font-weight: 600;
+	box-shadow: 0;
 }
 
 .inline-loadcomments-btn {
@@ -1193,6 +1218,7 @@ body.dark {
 	
 	.side {
 		z-index: 10;
+		background: #eee;
 	}
 
     .side.show-mobile-sidebar {
