@@ -161,6 +161,35 @@
 	}
 }
 
+.arrow-downvote:after{
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+    margin-top: -6px;
+    margin-left: 32px;
+    padding: 12px;
+    background-color: rgba(79,77,192,0.0);
+    border: none;
+    border-radius: 4px;
+    color: rgba(255,255,255,0);
+    content: "Vote based on quality, not opinion.";
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 13px;
+    transition: all 250ms cubic-bezier(0, 0, 0, .9);
+    pointer-events: none;
+    min-width: 200px;
+}
+
+.arrow-downvote:hover:after{
+    visibility: visible;
+    background-color: rgba(24,24,24,0.9);
+    color: #FFF;
+    margin-left: 48px;
+}
+
 /*--- fun stuff :> ---*/
 
 .leavemoderator:hover,
