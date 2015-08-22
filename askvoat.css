@@ -178,13 +178,6 @@
     content: "You are here forever.";
 }
 
-/*
-a[href$="/user/Kneegrow"]:after { content: "★"; }
-a[href$="/user/she"]:after { content: "♡"; }
-a[href$="/user/Stoic"]:after { content: "∀"; }
-a[href$="/user/Kva"]:after { content: "♚"; }
-a[href$="/user/Shiny"]:after { content: "☼"; }*/
-
 /*--- Light Mode
 ----------------------------*/
 
@@ -268,18 +261,20 @@ a.btn-tour:hover {
     margin: 15px auto 0 auto;
     position: relative;
     display: block;
-    box-shadow: none;
+    box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.26);
     transition: 150ms all cubic-bezier(0, 0, 0, .9);
 }
 
 .btn-whoaverse.contribute.submit-text:hover {
     border-radius: 25px;
+    box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.26);
 }
 
 .btn-whoaverse.contribute.submit-text:active {
     position: relative;
     top: 0;
     opacity: .5;
+    box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.26);
     transition: 75ms all cubic-bezier(0, 0, 0, .9);
 }
 
@@ -380,7 +375,7 @@ a.btn-tour {
 .comment .arrow-upvoted,
 .link.stickied .midcol:after
 {
-    background-image: url(https://veuwer.com/i/2zjk.png);
+    background-image: url(https://i.imgur.com/yW39dBS.png);
 }
 
 #manage {
@@ -495,7 +490,7 @@ a.btn-tour {
 
 body {
     background: #eaeaea
-        url(https://veuwer.com/i/2zdx.png);
+        url(https://i.imgur.com/4D8AzXj.png);
     color: #424C50;
     font: 10px Arial;
 }
@@ -596,7 +591,7 @@ a:focus {
     display: inline-block;
     height: 170px;
     width: 595px;
-    background-image: url(https://veuwer.com/i/2zdz.png);
+    background-image: url(https://i.imgur.com/sqPX7y0.png);
     position: absolute;
     top: 24px;
     left: 0;
@@ -615,7 +610,8 @@ a:focus {
     padding: 0;
 }
 
-#header-banner > form {
+#header-banner > form,
+#header-banner > #header-account {
     align-self: center;
 }
 
@@ -640,6 +636,10 @@ a:focus {
 .user .userkarma,
 span.upvoatsGiven {
     margin: 0 2px;
+}
+
+#header-account .logged-out a {
+    color: #fff;
 }
 
 /*    Tabmenu    */
@@ -904,6 +904,10 @@ a.author.moderator:after,
     align-self: flex-start;
 }
 
+.link:first-of-type:hover .midcol {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+}
+
 .link .title {
     text-align: left;
     margin-bottom: 5px;
@@ -956,15 +960,14 @@ a.author.moderator:after,
 
 .md a,
 .md a:visited {
-    background: #F1F4F5;
     color: #20B7F1;
     transition: 100ms ease-out all;
 }
 
 .md a:hover {
     text-decoration: none;
-    *background: transparent;
-    color: #98DBF5;
+    background: #F1F4F5;
+    *color: #98DBF5;
 }
 
 .md blockquote,
@@ -1061,7 +1064,7 @@ a.author.moderator:after,
 
 body.dark {
     background-color: #333;
-    color: #7D8285;
+    color: #ccc;
 }
 
 .dark #header {
@@ -1110,7 +1113,7 @@ body.dark {
 
 .dark .link .entry,
 .dark .link .midcol {
-    background: #333;
+    background: #3c3c3c;
     border-color: #393939;
 }
 
@@ -1129,12 +1132,13 @@ body.dark {
 
 .dark .md a,
 .dark .md a:visited {
-    background-color: #242829;
     color: #3D5057;
 }
 
 .dark .md a:hover {
-    color: #45626D !important;
+    *color: #45626D !important;
+    color: #3D5057 !important;
+    background-color: #242829;
 }
 
 .dark a.author,
@@ -1218,7 +1222,8 @@ body.dark {
 	
 	.side {
 		z-index: 10;
-		background: #eee;
+		background: #eaeaea
+            url(https://i.imgur.com/4D8AzXj.png);
 	}
 
     .side.show-mobile-sidebar {
@@ -1239,6 +1244,12 @@ body.dark {
 
     #show-menu-button.show-mobile-sidebar {
         opacity: 0.5;
+    }
+    
+    .show-mobile-sidebar .titlebox .btn-whoaverse-paging {
+        display: block;
+        float: none;
+        margin: 10px 0;
     }
 }
 
@@ -1276,8 +1287,11 @@ body.dark {
 
 @media(max-width: 700px) {
     .comment .midcol {
-        display: flex;
         float: none;
+    }
+    
+    .comment .arrow-upvote {
+        margin-bottom: 3px;
     }
 }
 
@@ -1290,11 +1304,23 @@ body.dark {
     }
 
     #header-account {
-        display: none;
+        *display: none;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        filter: contrast(0);
+        text-align: left;
+        width: 300px;
+        z-index: 10;
+        max-height: 30px;
+    }
+    
+    .dark #header-account {
+        filter: contrast(1);
     }
 
-    .show-mobile-sidebar #header-account {
-        
+    #mailcounter {
+        display: none;
     }
 
     #show-menu-button,
@@ -1359,4 +1385,64 @@ body.dark {
 
 .titlebox .md h5 + blockquote blockquote {
     font-style: normal;
+}
+
+/*--- COMPATABILITY YAY ---*/
+#header-banner,
+#container,
+.tabmenu,
+.link {
+    display: -webkit-box;      /* Old Safari */
+    display: -moz-box;         /* Old Firefox */
+    display: -ms-flexbox;      /* IE */
+    display: -webkit-flex;     /* Old Chrome */
+    display: flex;             /* Unbreak new browsers */
+}
+
+.side {
+    -webkit-box-ordinal-group: 1;  
+    -moz-box-ordinal-group: 1;     
+    -ms-flex-order: 1;     
+    -webkit-order: 1;  
+}
+
+#container .content,
+.tabmenu,
+.link .entry {
+    flex-grow: 1;
+}
+
+.link .entry {
+    -webkit-flex-shrink: 10000;
+}
+
+.btn-whoaverse.contribute.submit-text:before {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+}
+
+.btn-whoaverse,
+a.btn-whoaverse,
+a.btn-tour,
+.btn-whoaverse-paging,
+.btn-whoaverse.contribute.submit-text,
+.link .flat-list li a,
+.comment .flat-list li a,
+.inline-loadcomments-btn,
+.tabmenu li.disabled a,
+.tabmenu li.disabled a:hover,
+.tabmenu li.selected a,
+.tabmenu li.selected a:hover,
+.tabmenu li.disabled a.contribute,
+.tabmenu li.disabled a.contribute:hover,
+.tabmenu li.selected a.contribute,
+.tabmenu li.selected a.contribute:hover,
+.form-control,
+.commenttextarea,
+.link .midcol,
+.link .entry {
+    -webkit-transition: 150ms all cubic-bezier(0, 0, 0, .9);
+    -moz-transition: 150ms all cubic-bezier(0, 0, 0, .9);
+    -o-transition: 150ms all cubic-bezier(0, 0, 0, .9);
 }
