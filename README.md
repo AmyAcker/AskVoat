@@ -4,7 +4,10 @@ Under version control because why not.
 
 Every time the CSS live at voat.co/v/AskVoat is updated there will be a new release.
 
-##Info
+##How to contribute
 
-* The "pallet_main.png" files contains the main colors used. There will be variations on the color shades but it'll be mostly based on that.
-* The "goat.png" file is the logo used in the header. It's converted into base64 and embedded in the stylesheet directly. The "goat.psd" file contains the unredered image.
+1. Spot and improvement/bug.
+2. Open an issue.
+3. Wait until Gyyyn(Shiny) gives the green light.
+4. Work on the issue.
+5. Make a pull request of the issue once it is worked out.
