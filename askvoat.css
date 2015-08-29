@@ -214,8 +214,9 @@
 
 /*    Main Font AKA Roboto Abuse */
 
-@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
 body,
 .tabmenu a,
@@ -234,8 +235,8 @@ body,
 .alert,
 .md,
 .h6, h6 {
-    font-family: "Neris", Arial, sans-serif;
-    font-weight: 300;
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 400;
 }
 
 /*    Global Links   */
@@ -834,12 +835,14 @@ a.author:hover,
 }
 
 a.author.moderator,
-.comment a.author.moderator {
+.comment a.author.moderator,
+.link.stickied a.author.moderator {
     color: #7DAE8F;
 }
 
 a.author.moderator:after,
-.comment a.author.moderator:after {
+.comment a.author.moderator:after,
+.link.stickied a.author.moderator:after {
     margin: 2px;
     padding: 0 2px;
     border-radius: 2px;
@@ -877,7 +880,7 @@ a.author.moderator:after,
 .link .midcol {
     align-self: center;
     margin: 0;
-    border: 3px #f7f7f7 solid;
+    border: 3px #fff solid;
     background: #fff;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
     border-radius: 50%;
