@@ -190,6 +190,22 @@
     margin-left: 48px;
 }
 
+.side .md h6 {
+    position: absolute;
+    left: 0px;
+    top: 24px;
+    background: #fff;
+    border-radius: 4px;
+    border: 0;
+    z-index: 99;
+    width: auto;
+    margin-left: 250px;
+    margin-top: 7px;
+    font-size: 14px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.26);
+    padding: 4px 12px;
+}
+
 /*--- fun stuff :> ---*/
 
 .leavemoderator:hover,
@@ -540,7 +556,7 @@ body {
 #header:focus { outline: none; }
 
 #header-container {
-    margin-top: 130px;
+    margin-top: 140px;
     border-bottom: 3px solid #eee;
     border: 0;
     background: #5E8391;
@@ -627,7 +643,7 @@ a:focus {
     position: absolute;
     top: 24px;
     left: 0;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -1430,6 +1446,10 @@ body.dark {
     display: -ms-flexbox;      /* IE */
     display: -webkit-flex;     /* Old Chrome */
     display: flex;             /* Unbreak new browsers */
+}
+
+#header-banner {
+    -webkit-align-items: center;
 }
 
 #header-account {
