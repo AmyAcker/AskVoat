@@ -175,7 +175,6 @@
     color: rgba(255,255,255,0);
     content: "Vote based on quality, not opinion.";
     text-align: center;
-    letter-spacing: 1px;
     font-weight: 400;
     font-size: 13px;
     transition: all 250ms cubic-bezier(0, 0, 0, .9);
@@ -252,7 +251,8 @@ body,
 
 .alert,
 .md,
-.h6, h6 {
+.h6, h6,
+.arrow-downvote:after {
     font-family: "Lato", Arial, sans-serif;
     font-weight: 400;
 }
@@ -1249,6 +1249,14 @@ body.dark {
         line-height: 57px;
         min-width: 0;
     }
+    
+    .side .md h6 {
+        display: none;
+    }
+    
+    #header-img-a {
+        margin-top: 0;
+    }
 }
 
 @media(max-width: 870px) {
@@ -1276,9 +1284,11 @@ body.dark {
 	}
 
     .side.show-mobile-sidebar {
-        top: 148px;
+        padding-top: 148px;
+        top: 0;
         left: 0;
 		margin: 0;
+        height: 100%;
     }
 
     #modal-background {
@@ -1353,15 +1363,25 @@ body.dark {
     }
 
     #header-account {
-        *display: none;
+        opacity: 0;
         position: absolute;
-        left: 0;
-        top: 70px;
+        left: -300px;
+        top: 165px;
         filter: contrast(0);
         text-align: left;
         width: 300px;
         z-index: 10;
         max-height: 30px;
+        transition: 150ms cubic-bezier(0, 0, 0, .9) all;
+    }
+    
+    .side.show-mobile-sidebar {
+        padding-top: 198px;
+    }
+    
+    .show-mobile-sidebar #header-account {
+        left: 0;
+        opacity: 1;
     }
     
     .dark #header-account {
@@ -1371,13 +1391,18 @@ body.dark {
     #mailcounter {
         display: none;
     }
-
+    
+    #show-menu-button:before {
+        border-color: #fff;
+    }
+    
     #show-menu-button,
 	#show-menu-button.show-mobile-sidebar {
         position: absolute;
-        top: 26px;
+        top: 98px;
         left: 0;
         margin: 15px;
+        z-index: 7;
     }
 }
 
@@ -1391,9 +1416,9 @@ body.dark {
     }
 }
 
-@media(max-width: 350px) {
+@media(max-width: 360px) {
     #header-img-a {
-        display: none;
+        left: 5%;
     }
 	
 	.link:first-of-type .midcol {
@@ -1504,4 +1529,12 @@ a.btn-tour,
     -webkit-transition: 150ms all cubic-bezier(0, 0, 0, .9);
     -moz-transition: 150ms all cubic-bezier(0, 0, 0, .9);
     -o-transition: 150ms all cubic-bezier(0, 0, 0, .9);
+}
+
+#show-menu-button,
+#show-menu-button.show-mobile-sidebar,
+#header-account {
+    -webkit-transition: 300ms all cubic-bezier(0, 0, 0, .9);
+    -moz-transition: 300ms all cubic-bezier(0, 0, 0, .9);
+    -o-transition: 300ms all cubic-bezier(0, 0, 0, .9);
 }
