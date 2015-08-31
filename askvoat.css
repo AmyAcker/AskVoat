@@ -1316,6 +1316,7 @@ body.dark {
     .tabmenu {
         font-size: 10pt;
         line-height: 50px;
+        -webkit-justify-content: center;
         justify-content: center;
     }
 
