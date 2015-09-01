@@ -294,8 +294,11 @@ a.btn-tour:hover {
 }
 
 .btn-whoaverse.contribute:hover {
-    background: linear-gradient(to bottom, #729AA9 0%, #538294 100%);
-    border-color: #5E8391;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #A5C2CD 0%, #7FA5B4 100%);
+    border-color: #7FA5B4;
+    color: #fafafa;
+    transition: 150ms all cubic-bezier(0, 0, 0, .9);
 }
 
 .btn-whoaverse.contribute.submit-text {
@@ -309,13 +312,13 @@ a.btn-tour:hover {
     margin: 15px auto 0 auto;
     position: relative;
     display: block;
-    box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.26);
     transition: 150ms all cubic-bezier(0, 0, 0, .9);
 }
 
 .btn-whoaverse.contribute.submit-text:hover {
     border-radius: 25px;
-    box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.26);
 }
 
 .btn-whoaverse.contribute.submit-text:active {
@@ -1553,6 +1556,7 @@ a.btn-tour,
 .form-control,
 .commenttextarea,
 .link .midcol,
+.btn-whoaverse.contribute.submit-text:before,
 .link .entry {
     -webkit-transition: 150ms all cubic-bezier(0, 0, 0, .9);
     -moz-transition: 150ms all cubic-bezier(0, 0, 0, .9);
