@@ -657,6 +657,11 @@ a:focus {
 
 /*--- Header elements ---*/
 
+.whoaSubscriptionMenu > li > ul {
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+
 #header-img-a {
     display: inline-block;
     height: 170px;
