@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 /*---
 *
 *    See LICENSE file on github.com/Gyyyn/AskVoat for license.
@@ -27,7 +31,7 @@
     left: 0;
 }
 
-#header-account .separator, #header-account .user {
+#header-account .separator, #header-account .logged-in .user {
     font-size: 0;
 } #header-account .user span, #header-account .user a { font-size: 12px; }
 
@@ -227,12 +231,6 @@
 ----------------------------*/
 
 /*--- Fonts & Typography ---*/
-
-/*    Main Font AKA Roboto Abuse */
-
-@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Lato);
 
 body,
 .tabmenu a,
@@ -699,7 +697,6 @@ a:focus {
 }
 
 #header-account {
-    width: 300px;
     text-align: center;
 }
 
@@ -1398,7 +1395,7 @@ body.dark {
         top: 3px;
     }
 
-    span.user:first-of-type {
+    .logged-in span.user:first-of-type {
         display: none;
     }
 }
