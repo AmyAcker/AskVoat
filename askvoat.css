@@ -305,7 +305,7 @@ a.btn-tour:hover {
 .btn-whoaverse.contribute.submit-text {
     border: 0;
     background: #fff;
-    width: 85px;
+    width: 110px;
     height: 70px;
     border-radius: 100%;
     color: #555;
@@ -347,11 +347,11 @@ a.btn-tour:hover {
 }
 
 .btn-whoaverse.contribute.submit-text:after {
-    content: "?";
+    content: "Ask";
     font-family: "Permanent Marker", sans-serif;
     font-size: 28pt;
     position: relative;
-    top: -2px;
+    top: -4px;
 }
 
 .btn-whoaverse-paging {
